@@ -4,12 +4,6 @@ styles.rel="stylesheet";
 styles.href="slideshow.css";
 document.head.appendChild(styles);
 document.querySelector(slideshow.container).innerHTML = `
-<div class="slideshow-info"></div>
-<div class="slideshow-docs">Arrow keys go back/forward.
-<span>space to toggle autoplay</span></div>
-<button id="slideshow-next">▶</button>
-<button id="slideshow-prev">◀</button>
-<button id="slideshow-autoplay"></button>
 <div class="slideshow-wrapper">
 </div>
 `;
