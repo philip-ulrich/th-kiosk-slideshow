@@ -19,11 +19,10 @@ let restart = slideshow.endless === 'no' ? false : true;
 let first = false;
 let last = false;
 let timeout = false;
-let speed = slideshow.speed || 3000;
+let speed = slideshow.speed || 10000;
 let all = slideshow.media.length
 
 function validatecounter() {
-  autoplay.innerText = autoincrease ? "▶️" : '⏸';
   if (restart) {
     if (counter < 0) counter = all - 1;
     counter = counter % all;
@@ -55,7 +54,6 @@ function validatecounter() {
 }
 function show() {
   clearTimeout(timeout);
-  out.innerText = `${slideshow.media[counter]} ${counter+1}/${all}`;
   wrapper.innerText = '';
   wrapper.dataset.loaded = 'false';
 
@@ -113,16 +111,6 @@ function toggleauto() {
   autoincrease = !autoincrease;
   validatecounter();
 };
-next.addEventListener('click', nextslide);
-prev.addEventListener('click', prevslide);
-autoplay.addEventListener('click',toggleauto);
-document.addEventListener('keyup', ev => {
-  ev.preventDefault();
-  if (ev.key === "ArrowRight") { nextslide(); }
-  if (ev.key === "ArrowUp") { history.back(); }
-  if (ev.key === "ArrowLeft") { prevslide(); }
-  if (ev.key === " ") { toggleauto(); }
-});
 validatecounter();
 } else {
   console.error('Please define a slideshow object first');
