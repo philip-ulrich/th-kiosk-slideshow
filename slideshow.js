@@ -19,7 +19,7 @@ let restart = slideshow.endless === 'no' ? false : true;
 let first = false;
 let last = false;
 let timeout = false;
-let speed = slideshow.speed || 10000;
+let speed = slideshow.speed || 15000;
 let all = slideshow.media.length
 
 function validatecounter() {
