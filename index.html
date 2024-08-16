@@ -13,11 +13,8 @@
   let slideshow = {
     container: '#slideshow-container',
     media: [
-      "ball.jpg", "ball.mp4", "begging-puppy.jpg", 
-      "corgi-boing.gif", "dinowalk.mp4", "dirty.mp4", 
-      "dog-with-many-balls.jpeg", "goldiejump.mp4", 
-      "puppy-snapping.gif", "step.mp4", "tippy.mp4", 
-      "wag.mp4"
+      "food1.jpg", "food2.jpg", "food3.jpg", 
+      "food4.jpg"
     ],
     folder: 'imgs/',
     autoplay: 'yes',
@@ -25,5 +22,10 @@
   }
 </script>
 <script src="slideshow.js"></script>
+<script>
+    setInterval(function() {
+      location.reload();
+    }, 60000); // 60000 milliseconds = 1 minute
+</script>
 </body>
 </html>
